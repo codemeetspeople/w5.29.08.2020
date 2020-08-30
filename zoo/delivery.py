@@ -14,6 +14,7 @@ PATTERN = (
 
 def deliver(animal):
     sound = ''.join([random.choice(ascii_lowercase) for _ in range(4)])
+
     animal_cls = PATTERN.format(
         classname=animal.capitalize(),
         sound=sound
