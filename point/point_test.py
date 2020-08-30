@@ -1,6 +1,7 @@
 import unittest
 from point import Point
 
+
 class TestPoint(unittest.TestCase):
     def test_point_default_init(self):
         point = Point()
@@ -34,11 +35,11 @@ class TestPoint(unittest.TestCase):
         self.assertEqual(point.x, 0.0)
 
         point.x = 42
-        self.assertEqual(point.x, 42.0)        
+        self.assertEqual(point.x, 42.0)
 
     def test_point_init_exception(self):
         with self.assertRaises(ValueError):
-            point = Point('ololo', 'trololo')
+            Point('ololo', 'trololo')
 
     def test_point_setter_exception(self):
         point = Point()

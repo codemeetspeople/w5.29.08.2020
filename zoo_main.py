@@ -21,9 +21,10 @@ def main():
         else:
             deliver(action)
             reload(animals)
-        
+
         print()
         print()
+
 
 try:
     main()

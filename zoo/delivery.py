@@ -18,7 +18,7 @@ def deliver(animal):
         classname=animal.capitalize(),
         sound=sound
     )
-    
+
     with open(settings.ZOO_ANIMALS, 'r') as file:
         data = file.read()
 

@@ -3,7 +3,7 @@ def run_N_times(times):
         def inner_wrapper(*args, **kwargs):
             for _ in range(times):
                 func(*args, **kwargs)
-        
+
         inner_wrapper.__name__ = func.__name__
         return inner_wrapper
     return outer_wrapper
@@ -12,6 +12,7 @@ def run_N_times(times):
 @run_N_times(3)
 def hello(username):
     print(f'Hello {username}!')
+
 
 @run_N_times(5)
 def point(x, y, color='black'):

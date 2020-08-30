@@ -30,6 +30,6 @@ class Float:
 
 
 integer = Integer(5)
-float = Float(5)
+float_var = Float(5)
 
-print(integer + float)
+print(integer + float_var)

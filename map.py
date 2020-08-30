@@ -1,11 +1,14 @@
 array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 array2 = [i for i in array if i % 2 == 0]
 
+
 def increment(x):
     return x + 1
 
+
 def pow2(x):
     return x ** 2
+
 
 def sequence_modifier(func, sequence):
     result = []
@@ -14,6 +17,7 @@ def sequence_modifier(func, sequence):
         result.append(func(elem))
 
     return result
+
 
 print('Step 1')
 print(array)
