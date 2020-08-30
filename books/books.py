@@ -6,6 +6,10 @@ from books.db import (
 )
 
 
+class ObjectNotFound(Exception):
+    pass
+
+
 class Book:
     connection = get_connection()
 
@@ -56,6 +60,9 @@ class Book:
         cursor = self.connection.cursor()
         objects = cursor.execute(SELECT_BOOK_STATEMENT, (_id,))
         result = objects.fetchone()
+
+        if not result:
+            raise ObjectNotFound()
 
         self._id = result[0]
         self._title = result[1]
