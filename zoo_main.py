@@ -1,12 +1,13 @@
+from importlib import reload
 from zoo.delivery import deliver
-from zoo.animals import ANIMALS
+from zoo import animals
 
 
 def main():
     while True:
         print('Hello! Welcome into the zoo!')
 
-        available_animals = ' '.join(ANIMALS.keys())
+        available_animals = ' '.join(animals.ANIMALS.keys())
 
         print(f'Available animals: {available_animals}')
         action = input().strip().lower()
@@ -15,10 +16,11 @@ def main():
             print('Bye! Bye!')
             exit()
 
-        if action in ANIMALS.keys():
-            ANIMALS[action].speak()
+        if action in animals.ANIMALS.keys():
+            animals.ANIMALS[action].speak()
         else:
             deliver(action)
+            reload(animals)
         
         print()
         print()

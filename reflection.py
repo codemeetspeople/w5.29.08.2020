@@ -28,6 +28,7 @@ class Float:
             return Integer(self.value + other.value)
         return NotImplemented
 
+
 integer = Integer(5)
 float = Float(5)
 

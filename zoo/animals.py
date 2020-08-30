@@ -3,7 +3,7 @@ ANIMALS = {}
 
 def animal_in_zoo(cls):
     if cls.get_title() not in ANIMALS:
-        ANIMALS[cls.get_title()] = cls 
+        ANIMALS[cls.get_title()] = cls
 
     return cls
 
@@ -37,3 +37,17 @@ class Beaver(Animal):
     @classmethod
     def speak(cls):
         print(f'{cls.get_title()} say pfff-pfff')
+
+
+@animal_in_zoo
+class Elephant(Animal):
+    @classmethod
+    def speak(cls):
+        print(f'{cls.get_title()} say ehwb-ehwb')
+
+
+@animal_in_zoo
+class Fox(Animal):
+    @classmethod
+    def speak(cls):
+        print(f'{cls.get_title()} say hico-hico')
